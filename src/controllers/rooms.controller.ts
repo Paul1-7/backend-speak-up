@@ -15,9 +15,7 @@ export async function createRoom(request: Request, response: Response, next: Nex
     return response.status(201).json({ meet_id: newRoom.meet_id, message: msg.createSuccess });
   } catch (error) {
     next(error);
-  } finally {
-    await sequelize.close();
-  }
+  } 
 }
 
 export async function joinRoom(request: Request, response: Response, next: NextFunction) {
@@ -27,9 +25,7 @@ export async function joinRoom(request: Request, response: Response, next: NextF
     return response.status(201).json({ message: "Participant joined successfully" });
   } catch (error) {
     next(error);
-  } finally {
-    await sequelize.close();
-  }
+  } 
 }
 
 export async function leaveRoom(request: Request, response: Response, next: NextFunction) {
@@ -39,9 +35,7 @@ export async function leaveRoom(request: Request, response: Response, next: Next
     return response.sendStatus(204);
   } catch (error) {
     next(error);
-  } finally {
-    await sequelize.close();
-  }
+  } 
 }
 
 export async function getAllRooms(request: Request, response: Response, next: NextFunction) {
@@ -50,7 +44,5 @@ export async function getAllRooms(request: Request, response: Response, next: Ne
     return response.status(200).json({ data: rooms });
   } catch (error) {
     next(error);
-  } finally {
-    await sequelize.close();
-  }
+  } 
 }

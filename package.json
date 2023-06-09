@@ -4,8 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "build": "tsc && ef-tspm",
-    "start": "tsc && ts-node -r tsconfig-paths/register ./build/app.js",
+    "build": "tsc",
+    "start": "ts-node -r tsconfig-paths/register ./build/app.js",
     "dev": "nodemon",
     "lint": "eslint . --ext .ts",
     "lint.fix": "eslint . --ext .ts --fix",

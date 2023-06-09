@@ -34,8 +34,6 @@ export async function addUser(request: Request, response: Response, next: NextFu
       return response.status(400).json({ message: "missing fields" });
     }
     next(error);
-  } finally {
-    await sequelize.close();
   }
 }
 

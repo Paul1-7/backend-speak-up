@@ -16,10 +16,10 @@ import routeUser from "./users.route";
 
 function routerApi(app: Application): void {
   app.use("/api/v1/auth", routeAuth);
-  app.use("/api/v1/auth", routePlan);
-  app.use("/api/v1/auth", routeRoom);
-  app.use("/api/v1/auth", routeSuscriptions);
-  app.use("/api/v1/auth", routeUser);
+  app.use("/api/v1/plans", routePlan);
+  app.use("/api/v1/rooms", routeRoom);
+  app.use("/api/v1/subscription", routeSuscriptions);
+  app.use("/api/v1/users", routeUser);
   // fs.readdirSync(PATH_ROUTES).filter((file: string) => {
   //   const name: string = removeExtension(file);
   //   if (name !== "index") {

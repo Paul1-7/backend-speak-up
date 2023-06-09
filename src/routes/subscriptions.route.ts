@@ -5,6 +5,6 @@ import { subscriptionSchema } from "~/schemas";
 
 const routeSuscriptions = Router();
 
-routeSuscriptions.post("/", [validateScheme(subscriptionSchema)], newSubscription);
+routeSuscriptions.post("/", newSubscription);
 
 export default routeSuscriptions;
